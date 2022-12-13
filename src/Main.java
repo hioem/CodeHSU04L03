@@ -1,4 +1,13 @@
 public class Main {
+
+        /*
+            Use the following methods:
+            .length()
+            .substring(start,finish) doesn't include finish
+            .substring(start) goes to the end
+            .indexOf(someString)
+            someString.equals(otherString)
+         */
     public static void main(String[] args) {
         System.out.println(VowelCount("This is a string."));
         System.out.println("Correct output: 4");
@@ -18,8 +27,20 @@ public class Main {
      * @return vowel count int
      */
     public static int VowelCount(String input){
+        int length = input.length();
+        String lowerCaseInput = input.toLowerCase();
+        //make input lower case
+        int count = 0;
+        for(int i = 0; i<length; i++){
+            String letter = lowerCaseInput.substring(i,i+1);
+            if(letter.equals("i")||letter.equals("o")||letter.equals("u") ||letter.equals("a")||letter.equals("e")){
+                count++;
+            }
+        }
 
-        return -1;
+
+
+        return count;
     }
 
     /**
