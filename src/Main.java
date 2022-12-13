@@ -49,6 +49,19 @@ public class Main {
      * @return String with no vowels
      */
     public static String VowelRemover(String input){
+        int length = input.length();
+        String lowerCaseInput = input.toLowerCase();
+        //make input lower case
+        int count = 0;
+        for(int i = 0; i<length; i++){
+            String letter = lowerCaseInput.substring(i,i+1);
+            String out;
+            if(letter.equals("i")||letter.equals("o")||letter.equals("u") ||letter.equals("a")||letter.equals("e")){
+                count++;
+            }
+        }
+
+
 
         return "";
     }
@@ -60,8 +73,22 @@ public class Main {
      * @return true if target found, false otherwise
      */
     public static boolean ContainsSubstring(String input, String target){
+        String linput = input.toLowerCase();
+        String ltarget = target.toLowerCase();
 
-        return false;
+        int targetLength = target.length();
+        int inputLength = input.length();
+        /*if(linput.indexOf(ltarget)>=0){
+            return true;
+        }
+        else{
+            return false;
+        }
+         */
+
+        for(int i =0;i>1; i+=targetLength){
+            if(){
+        }
     }
 
     /**
